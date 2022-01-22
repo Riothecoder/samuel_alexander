@@ -5,7 +5,171 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HELLO WORLD</title>
+    <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+    rel="stylesheet"
+  />
+    <style>
+        .nav{
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: blue;
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+            z-index: 10;
+        }
+        .nav-list {
+            display: flex;
+            margin-right: 2rem;
+        }
+        .nav-list li a{
+            color: white;
+            text-decoration: none;
+        }
+        .nav-list li{
+            list-style: none;
+            float: left;
+            padding: 5px;
+            margin: 4px;
+        }
+        .nav-list li:hover{
+            background-color: red;
+        }
+        .welcome-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 90vh;
+        }
+        .welcome-section h1{
+            font-size: 3rem;
+            font-weight: 200;
+        }
+        .welcome-section > p {
+            font-style: italic;
+            color: var(--main-red);
+        }
+        .projects-section {
+            text-align: center;
+            padding: 10rem 2rem;
+            background: green;
+        }
+
+        .projects-section-header {
+            font-size: 3rem;
+            font-weight: 200;
+            max-width: 640px;
+            margin: 0 auto 6rem auto;
+            border-bottom: 0.2rem solid blue;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-gap: 4rem;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            margin-bottom: 6rem;
+        }
+        .project {
+  background: var(--main-gray);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.code {
+  color: var(--main-gray);
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: #ff7f50;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.contact-section-header > p {
+  font-style: italic;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+/* Contact section */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+}
+
+.contact-section-header > h2 {
+  font-size: 6rem;
+}
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+
+/* Footer */
+
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: var(--main-gray);
+  border-top: 4px solid var(--main-red);
+}
+
+footer > p {
+  margin: 2rem;
+}
+
+footer i {
+  vertical-align: middle;
+}
+    </style>
+    <title>Samuel And Alexander portfolio</title>
 </head>
 
 <body>
@@ -13,21 +177,25 @@
         <nav id="navbar" class="nav">
             <ul class="nav-list">
                 <li>
-                    <a href="#welcome-section">About me</a>
+                    <a href="#welcome-section">About us</a>
                 </li>
                 <li>
                     <a href="#projects">Works</a>
                 </li>
                 <li>
-                    <a href="#contact">Contact me</a>
+                    <a href="#contact">Contact us</a>
                 </li>
             </ul>
         </nav>
     </header>
-    <section id="welcome-section" class="welcome-section">
-        <h1>Samuel and Alexander we are software developers</h1>
-    </section>
-    <section id="contact"></section>
+    <br>
+    <center>
+        <section id="welcome-section" class="welcome-section">
+            <h1>Samuel and Alexander</h1>
+            <p> we are software developers</p>
+        </section>
+    </center>
+
     <section id="projects" class="projects-section">
         <h2 class="projects-section-header">These are some of our projects</h2>
 
@@ -52,6 +220,38 @@
         </div>
     </section>
     <!-- <h1>HELLO WORLD, we are software developers</h1>-->
+
+    <section id="contact" class="contact-section">
+        <div class="contact-section-header">
+          <h2>Let's work together...</h2>
+        </div>
+        <div class="contact-links">
+        
+          <a
+            id="profile-link"
+            href="https://github.com/Riothecoder/samuel_alexander/tree/4004d7f664600ff1a0dcb3562a0ce4fdd56bde01"
+            target="_blank"
+            class="btn contact-details"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+        </div>
+      </section>
+      
+      <!-- END CONTACT SECTION -->
+      
+      <!-- START FOOTER SECTION -->
+      
+      <footer>
+
+          <center>
+              <p>
+                &copy; Created for
+                <a href="https://github.com/Riothecoder/samuel_alexander/tree/4004d7f664600ff1a0dcb3562a0ce4fdd56bde01" target="_blank"
+                  >Samuel and Alexander <i class="fab fa-github"></i
+                ></a>
+              </p>
+        </center>
+      </footer>
 </body>
 
 </html>
